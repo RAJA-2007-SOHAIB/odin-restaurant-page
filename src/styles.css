@@ -26,3 +26,121 @@ h5 {
     font-size: inherit;
     font-weight: inherit;
 }
+
+/* :) (:
+*/
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1vh 2vw;
+}
+
+header>nav>button{
+    padding: 1vh 1.3vw;
+    margin: 0 1.4vw;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 500;
+}
+#content {
+    background-color: whitesmoke;
+    font-size: minmax(16px, 3vw, 26px);
+    padding: 1vh 1.5vw;
+}
+#content .pages{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh 0;
+    width: max(70vw, 240px);
+    margin: 5vh auto;
+    padding: 3vh max(5vw, 20px);
+    background-color: white;
+}
+
+.pages .title,
+.home .info,
+.home .timings,
+.home .adress{
+    text-align: center;
+}
+
+.pages .title{
+    font-size: max(5vw, 36px);
+    font-weight: bold;
+    margin-bottom: min(7vh, 42px);
+    border-top-right-radius: max(10px, 3vw);
+    border-bottom-left-radius: max(10px, 3vw);
+    border: max(10px, 1vw) double black;
+}
+
+.home .timings,
+.home .info,
+.home .adress{
+    font-size: max(1vw, 18px);
+    font-weight: 500;
+    padding: 2vh max(3vw, 16px);
+}
+
+.location,
+.hours,
+.end {
+    justify-self: left;
+    font-weight: 600;
+    font-size: max(2vw, 24px);
+}
+
+
+.menu .category{
+    border: 2px solid gray;
+    margin-bottom: 2.5vh;
+    padding: 2vh 2vw;
+}
+
+.menu .category:last-child{
+    margin-bottom: 0;
+}
+
+.category .category-name{
+    font-size: x-large;
+    font-weight: bold;
+    justify-self: center;
+    padding: 2vh max(3vw, 16px);
+    margin-bottom: 1.5vh;
+    text-align: center;
+}
+
+.category .dish-item{
+    margin: 2vh 0 3vh;
+    padding: 1vh 1vw;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.dish-item .dish-name{
+    font-size: larger;
+    font-weight: bolder;
+    margin-bottom: 1vh;
+}
+
+.dish-item span{
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+
+.contact .person{
+    border: 2px solid black;
+    padding: 1vh 1vw;
+}
+
+.contact .person .person-name{
+    font-size: larger;
+    font-weight: bolder;
+}
+.contact .person .details{
+    font-size: medium;
+    font-weight: bold;
+    margin-left: min(15px, 2vw);
+}
