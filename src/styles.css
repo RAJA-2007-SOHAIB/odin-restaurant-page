@@ -144,3 +144,8 @@ header>nav>button{
     font-weight: bold;
     margin-left: min(15px, 2vw);
 }
+
+
+.home.hidden {
+    display: none !important;
+}
