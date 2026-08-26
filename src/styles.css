@@ -34,8 +34,11 @@ header {
     display: flex;
     justify-content: center;
     padding: 1vh 2vw;
+    flex-wrap: nowrap;
 }
-
+header>nav{
+    text-wrap-mode: nowrap;
+}
 header>nav>button{
     padding: 1vh 1.3vw;
     margin: 0 1.4vw;
@@ -52,7 +55,7 @@ header>nav>button{
     display: flex;
     flex-direction: column;
     gap: 2vh 0;
-    width: max(70vw, 240px);
+    width: max(75vw, 280px);
     margin: 5vh auto;
     padding: 3vh max(5vw, 20px);
     background-color: white;

@@ -74,11 +74,54 @@ const addToHome = function () {
     home.appendChild(timings);
     home.appendChild(adress);
 
+    home.classList.add("hidden");
 };
 
+const addToMenu = function () {
+    const menu = document.querySelector(".menu");
+    menu.innerHTML = "";
 
+    const title = document.createElement("div");
+    title.classList.add("title");
+    title.textContent = "Menu";
+
+    const category = document.createElement("div");
+    category.classList.add("category");
+    
+
+    const categoryName = document.createElement("div");
+    categoryName.classList.add("category-name");
+    categoryName.textContent = "Beverages";
+
+    const dishItem = document.createElement("div");
+    dishItem.classList.add("dish-item");
+    
+
+    const dishName = document.createElement("div");
+    dishName.classList.add("dish-name");
+    dishName.textContent = "Honey Tea";
+
+    const description = document.createElement("div");
+    description.classList.add("description");
+    description.textContent = "A warm, Sweat tea made with the highest quality honey and a bit of lemon to start your day off right!";
+
+    const prSpan = document.createElement("span");
+    prSpan.textContent = "$2";
+
+
+    menu.appendChild(title);
+    category.appendChild(categoryName);
+    dishItem.appendChild(dishName);
+    description.appendChild(prSpan);
+    dishItem.appendChild(description);
+    category.appendChild(dishItem);
+
+    menu.appendChild(category);
+
+}
 
 createPages();
 addToHome();
+addToMenu();
 
 
