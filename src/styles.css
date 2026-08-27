@@ -127,6 +127,8 @@ header>nav>button{
 }
 
 .dish-item span{
+    display: block;
+    justify-self: right;
     font-size: large;
     font-weight: bold;
     text-decoration: underline;
