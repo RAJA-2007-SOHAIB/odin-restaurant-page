@@ -230,11 +230,68 @@ const addToMenu = function () {
     categoryMainDishes.appendChild(dishItemFrenchToast);
 
     menu.appendChild(categoryMainDishes)
+    menu.classList.add("hidden");
 
 }
+
+const addToContact = function () {
+    const contact = document.querySelector(".contact");
+
+    const title = document.createElement("div");
+    title.classList.add("title");
+    title.textContent = "Contact";
+
+    const personMamaBear = document.createElement("div");
+    personMamaBear.classList.add("person");
+
+    const personNameMamaBear = document.createElement("div");
+    personNameMamaBear.classList.add("person-name");
+    personNameMamaBear.textContent = "Mama Bear";
+
+    const detailsMamaBear = document.createElement("div");
+    detailsMamaBear.classList.add("details");
+    detailsMamaBear.innerHTML = "Chef <br> 555-555-554 <br> themail@real.com";
+
+    const personPapaBear = document.createElement("div");
+    personPapaBear.classList.add("person");
+
+    const personNamePapaBear = document.createElement("div");
+    personNamePapaBear.classList.add("person-name");
+    personNamePapaBear.textContent = "Papa Bear";
+
+    const detailsPapaBear = document.createElement("div");
+    detailsPapaBear.classList.add("details");
+    detailsPapaBear.innerHTML = "Manager <br> 555-555-555 <br> notfake@real.com";
+
+    const personBabyBear = document.createElement("div");
+    personBabyBear.classList.add("person");
+
+    const personNameBabyBear = document.createElement("div");
+    personNameBabyBear.classList.add("person-name");
+    personNameBabyBear.textContent = "Baby Bear";
+
+    const detailsBabyBear = document.createElement("div");
+    detailsBabyBear.classList.add("details");
+    detailsBabyBear.innerHTML = "Waiter <br> 555-555-556 <br> real@notfake.com";
+
+    contact.appendChild(title);
+
+    personMamaBear.appendChild(personNameMamaBear);
+    personMamaBear.appendChild(detailsMamaBear);
+    personPapaBear.appendChild(personNamePapaBear);
+    personPapaBear.appendChild(detailsPapaBear);
+    personBabyBear.appendChild(personNameBabyBear);
+    personBabyBear.appendChild(detailsBabyBear);
+
+    contact.appendChild(personMamaBear);
+    contact.appendChild(personPapaBear);
+    contact.appendChild(personBabyBear);
+};
+
 
 createPages();
 addToHome();
 addToMenu();
+addToContact();
 
 
