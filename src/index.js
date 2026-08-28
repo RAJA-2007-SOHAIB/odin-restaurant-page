@@ -74,7 +74,6 @@ const addToHome = function () {
     home.appendChild(timings);
     home.appendChild(adress);
 
-    home.classList.add("hidden");
 };
 
 const addToMenu = function () {
@@ -286,12 +285,62 @@ const addToContact = function () {
     contact.appendChild(personMamaBear);
     contact.appendChild(personPapaBear);
     contact.appendChild(personBabyBear);
+
+    contact.classList.add("hidden");
+
 };
 
+const addEventListeners = function () {
+    const homePagebtn = document.querySelector(".home-btn");
+    const menuPagebtn = document.querySelector(".menu-btn");
+    const contactPagebtn = document.querySelector(".contact-btn");
+
+
+    const homePage = document.querySelector(".home");
+    const contactPage = document.querySelector(".contact");
+    const menuPage = document.querySelector(".menu");
+
+    homePagebtn.addEventListener("click", (event) => {
+        if (homePage.classList.contains("hidden")) {
+            if (!contactPage.classList.contains("hidden")) {
+                contactPage.classList.add("hidden");
+            }
+            if (!menuPage.classList.contains("hidden")) {
+                menuPage.classList.add("hidden");
+            }
+            homePage.classList.remove("hidden");
+        }
+    });
+    menuPagebtn.addEventListener("click", (event) => {
+        if (menuPage.classList.contains("hidden")) {
+            if (!contactPage.classList.contains("hidden"))
+                contactPage.classList.add("hidden");
+            if (!homePage.classList.contains("hidden")) {
+                homePage.classList.add("hidden");
+            }
+            menuPage.classList.remove("hidden");
+        }
+
+
+    });
+    contactPagebtn.addEventListener("click", (event) => {
+        if (contactPage.classList.contains("hidden")) {
+            if (!menuPage.classList.contains("hidden")) {
+                menuPage.classList.add("hidden");
+            }
+            if (!homePage.classList.contains("hidden")) {
+                homePage.classList.add("hidden");
+            }
+            contactPage.classList.remove("hidden");
+        }
+    });
+
+};
 
 createPages();
 addToHome();
 addToMenu();
 addToContact();
 
+addEventListeners();
 
